@@ -1,12 +1,24 @@
 # The deployment section should be excluded until
 # it is explicitly included in module 5
 
+#deployment:
+ # dockerhub:
+  #  branch: master
+   # commands:
+    #  - $TRIGGER
 deployment:
-  dockerhub:
+  staging:
     branch: master
-    commands:
-      - $TRIGGER
-
+    codedeploy:
+      nodejs-demo-app:
+        application_root: /
+        region: ap-south-1
+        revision_location:
+          revision_type: S3
+          s3_location:
+            bucket: aws-nodjs-unique123
+            key_pattern: circleci-demo-app-{BRANCH}-{SHORT_COMMIT}
+        deployment_group: nodejs-demo-dg
 test:
   override:    
     - mocha
