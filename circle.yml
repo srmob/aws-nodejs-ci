@@ -17,7 +17,7 @@ deployment:
           revision_type: S3
           s3_location:
             bucket: aws-nodjs-unique123
-            key_pattern: trial-app-{BRANCH}-{SHORT_COMMIT}
+            key_pattern: circleci-demo-app-{BRANCH}-{SHORT_COMMIT}
         deployment_group: dev
 test:
   override:    
