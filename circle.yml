@@ -10,7 +10,7 @@ deployment:
   staging:
     branch: master
     codedeploy:
-      nodejs-demo-app:
+      trial:
         application_root: /
         region: ap-south-1
         revision_location:
@@ -18,7 +18,7 @@ deployment:
           s3_location:
             bucket: aws-nodjs-unique123
             key_pattern: circleci-demo-app-{BRANCH}-{SHORT_COMMIT}
-        deployment_group: nodejs-demo-dg
+        deployment_group: dev
 test:
   override:    
     - mocha
