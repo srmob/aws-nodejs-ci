@@ -15,9 +15,8 @@ deployment:
         region: ap-south-1
         revision_location:
           revision_type: S3
-          bundleType: zip
           s3_location:
-            bucket: aws-nodjs-unique123
+            bucket: aws-nodjs-unique123/app.zip
             key_pattern: circleci-demo-app-{BRANCH}-{SHORT_COMMIT}
         deployment_group: dev
 test:
