@@ -1,2 +1,11 @@
 version: 0.0
 os: linux
+files:
+  - source: /
+    destination: /app
+hooks:
+  AfterInstall:
+    - location: scripts/prepareEnv.sh
+      timeout: 180
+  ApplicationStart:
+    - location: scripts/startApp.sh
