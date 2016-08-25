@@ -1,1 +1,1 @@
-node /app/app.js
+nohup node /app/app.js &
