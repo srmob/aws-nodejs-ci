@@ -14,5 +14,5 @@ app.get('/', function(req, res) {
 });
 
 app.listen(8002);
-console.log("Running on port 8002")
+console.log("Running on port/s 8002")
 module.exports.getApp = app;
